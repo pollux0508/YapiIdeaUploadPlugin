@@ -37,7 +37,7 @@ projectType 根据你要上传的接口类型决定，如果为dubbo 接口就�
   <option name="projectToken">yapi 中项目token</option>
   <option name="projectId">yapi 中项目id</option>
   <option name="yapiUrl">http://127.0.0.1:3000</option>
-  <option name="projectType">dubbo/api</option>
+  <option name="projectType">api</option>
 </component>
 ```
 
