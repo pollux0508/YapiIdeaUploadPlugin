@@ -1,4 +1,4 @@
-###YapiIdeaUploadPlugin
+### YapiIdeaUploadPlugin
 
 #### 目的
 减少yapi 录入时间
