@@ -1,7 +1,7 @@
 ### YapiIdeaUploadPlugin
 
 #### 目的
-减少yapi 录入时间
+减少yapi 录入时间，通过工具反向规范代码注释，和代码整洁
 
 #### 支持语言
 java
