@@ -51,4 +51,32 @@ projectType 根据你要上传的接口类型决定，如果为dubbo 接口就�
 
 
 
+#### 使用规则
+
+- 良好的java doc 注释能生成更好的文档，如下：生成的文档中属性就可以带上注释
+
+```
+/** 
+* 年龄
+*/
+private Integer age;
+
+```
+
+生成的文档接口名称就可以使用：添加或更新课程数据
+
+```
+    /**
+     * 添加或更新课程数据
+     *
+     * @param courseOpt
+     * @return {@link CommonRes}
+     */
+    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    public Course addOrUpdateCourse(@RequestBody CourseParam courseParam){
+    
+    }
+
+```
+
 
