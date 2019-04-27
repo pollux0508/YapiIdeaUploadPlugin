@@ -17,14 +17,12 @@ java
 #### 支持yapi 的版本
 1.5.0+
 
-#### 支持idea 版本
-2017 版本 ，2018 部分版本 (最近会兼容 2019-04-26)
 
 
 #### 使用方式
 - 下载yapiupload jar 包 （或者在idea 插件库搜索）
 - 打开idea，preferneces->plugins-> install plugin from disk（或者搜索 yapiupload),导入jar 包后(install)，重启
-- 配置信息：在项目目录下，.idea 文件夹下，找到misc.xml
+- 配置信息：在项目目录下，.idea 文件夹下，找到misc.xml   (如果找不到.idea 请查看是否被折叠或被隐藏)
 
 
 token 获取方式： 打开yapi ->具体项目->设置->token 配置 <br>
@@ -82,6 +80,40 @@ private Integer age;
 
 ```
 
+- 支持@link 参量定义展示在字段备注中
+
+
+```java
+
+第一种@link 方式
+
+/** 
+* 状态 {@link com.xxx.constant.StatusConstant}
+*/
+private Integer status;
+
+
+第二种@link 方式
+
+import com.xxx.constant.StatusConstant;
+
+/** 
+* 状态 {@link StatusConstant}
+*/
+private Integer status;
+
+
+不支持方式
+import com.xxx.constant.*;
+
+/** 
+* 状态 {@link StatusConstant}
+*/
+private Integer status;
+
+``` 
+
 
 #### 变更历史
-- 1.4:fixbug,备注中新增接口定义。
+- 1.4:fixbug,备注中新增接口定义。 
+- 1.5:支持{@link} 的常量定义显示在备注
