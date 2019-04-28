@@ -77,6 +77,18 @@ private Integer age;
     public Course addOrUpdateCourse(@RequestBody CourseParam courseParam){
     
     }
+    
+    
+    /**
+     * @description: 添加或更新课程数据
+     * @param: [sources, count]
+     * @return: java.util.List<com.btime.recommend.dto.babyRearing.BaseBabyRearingDO>
+     * @date: 2018/3/15
+     */
+     @RequestMapping(value = "/test", method = RequestMethod.POST)
+     public Course addOrUpdateCourse(@RequestBody CourseParam courseParam){
+    
+    }
 
 ```
 
