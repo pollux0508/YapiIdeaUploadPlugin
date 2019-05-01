@@ -22,7 +22,8 @@ java
 #### 使用方式
 - 下载yapiupload jar 包 （或者在idea 插件库搜索）
 - 打开idea，preferneces->plugins-> install plugin from disk（或者搜索 yapiupload),导入jar 包后(install)，重启
-- 配置信息：在项目目录下，.idea 文件夹下，找到misc.xml   (如果找不到.idea 请查看是否被折叠或被隐藏)
+- 配置信息：在项目目录下，.idea 文件夹下，找到misc.xml   (如果找不到.idea 请查看是否被折叠或被隐藏) 如果是 .ipr 模式创建的
+就找到 项目名.ipr
 
 
 token 获取方式： 打开yapi ->具体项目->设置->token 配置 <br>
@@ -75,6 +76,18 @@ private Integer age;
      */
     @RequestMapping(value = "/test", method = RequestMethod.POST)
     public Course addOrUpdateCourse(@RequestBody CourseParam courseParam){
+    
+    }
+    
+    
+    /**
+     * @description: 添加或更新课程数据
+     * @param: [sources, count]
+     * @return: java.util.List<com.btime.recommend.dto.babyRearing.BaseBabyRearingDO>
+     * @date: 2018/3/15
+     */
+     @RequestMapping(value = "/test", method = RequestMethod.POST)
+     public Course addOrUpdateCourse(@RequestBody CourseParam courseParam){
     
     }
 
