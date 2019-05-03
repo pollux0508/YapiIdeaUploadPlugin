@@ -131,3 +131,4 @@ private Integer status;
 - 1.4:fixbug,备注中新增接口定义。 
 - 1.5:支持{@link} 的常量定义显示在备注
 - 1.5.1: fixbug
+- 1.5.2: fixbug
