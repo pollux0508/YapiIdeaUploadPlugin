@@ -132,3 +132,4 @@ private Integer status;
 - 1.5:支持{@link} 的常量定义显示在备注
 - 1.5.1: fixbug
 - 1.5.2: fixbug
+- 1.5.3: fixbug
