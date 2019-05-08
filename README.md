@@ -33,7 +33,8 @@ token 获取方式： 打开yapi ->具体项目->设置->token 配置 <br>
 yapiUrl 固定<br>
 projectType 根据你要上传的接口类型决定，如果为dubbo 接口就填dubbo ，如果是api 接口就填api<br>
 
-
+attachUploadUrl:上传java 类zip 的url,可不填,如果要用请实现http://localhost/fileupload 接口
+接口请求参数为 file  文件类型。
 
 
 ```xml
@@ -42,6 +43,7 @@ projectType 根据你要上传的接口类型决定，如果为dubbo 接口就�
   <option name="projectId">yapi 中项目id</option>
   <option name="yapiUrl">http://127.0.0.1:3000</option>
   <option name="projectType">api</option>
+  <option name="attachUploadUrl">http://localhost/fileupload</option>
 </component>
 ```
 
@@ -135,3 +137,4 @@ private Integer status;
 - 1.5.1: fixbug
 - 1.5.2: fixbug
 - 1.5.3: fixbug
+- 1.6.0: 支持请求参数和响应参数的Java 类下载
