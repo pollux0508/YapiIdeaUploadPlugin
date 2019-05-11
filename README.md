@@ -24,7 +24,7 @@ java
 #### 使用方式
 - 下载yapiupload jar 包 （或者在idea 插件库搜索）
 - 打开idea，preferneces->plugins-> install plugin from disk（或者搜索 yapiupload),导入jar 包后(install)，重启
-- 配置信息：在项目目录下，.idea 文件夹下，找到misc.xml   (如果找不到.idea 请查看是否被折叠或被隐藏) 如果是 .ipr 模式创建的
+- 单模块配置信息：在项目目录下，.idea 文件夹下，找到misc.xml   (如果找不到.idea 请查看是否被折叠或被隐藏) 如果是 .ipr 模式创建的
 就找到 项目名.ipr
 
 
@@ -46,6 +46,26 @@ attachUploadUrl:上传java 类zip 的url,可不填,如果要用请实现http://l
   <option name="attachUploadUrl">http://localhost/fileupload</option>
 </component>
 ```
+
+- 多模块配置信息：在项目目录下，.idea 文件夹下，找到misc.xml   (如果找不到.idea 请查看是否被折叠或被隐藏) 如果是 .ipr 模式创建的
+          就找到 项目名.ipr
+          
+moduleList 获取方式：模块名称，用 "," 分割 ，不支持父节点和子模块名称一样的情况      
+          
+```xml
+ <component name="yapi">
+    <option name="moduleList">moduleName1,moduleName2</option>
+  </component>
+
+  <component name="moduleName1">
+      <option name="moduleName1.Token">yapi 中项目token</option>
+      <option name="moduleName1.Id">yapi 中项目id</option>
+      <option name="moduleName1.Url">http://127.0.0.1:3000</option>
+      <option name="moduleName1.Type">api</option>
+      <option name="moduleName1.AttachUploadUrl">http://localhost/fileupload</option>
+  </component>
+
+```          
 
 - 如果是dubbo 项目，选中dubbo interface 文件中的一个方法（要选中方法名称），右击YapiUpload(alt+u 快捷键)
 - 如果是api 项目，选中controller 类中的方法名称或类名（要选中方法名称，或类名，选中类名为当前类所有接口都上传），右击YapiUpload(alt+u快捷键)
@@ -139,3 +159,4 @@ private Integer status;
 - 1.5.3: fixbug
 - 1.6.0: 支持请求参数和响应参数的Java 类下载
 - 1.6.1: 支持RequestHeader & RequestAttribute
+- 1.6.2: 支持idea 多模块配置
